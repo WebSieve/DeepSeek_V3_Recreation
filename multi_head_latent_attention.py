@@ -118,3 +118,4 @@ mhla = Multi_Head_Latent_Attention(
 )
 test_output = mhla(test_input)
 print(f"test_output shape : {test_output.shape}")
+print(f"number of parameters : {sum(p.numel() for p in mhla.parameters()):,}")
