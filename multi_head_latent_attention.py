@@ -107,7 +107,7 @@ class Multi_Head_Latent_Attention(nn.Module):
 
 
 print("testing Multi_Head_Latent_Attention...")
-test_input = torch.randn(2, 3, 20)
+test_input = torch.randn(2, 10, 512)
 print(f"test_input shape : {test_input.shape}")
 mhla = Multi_Head_Latent_Attention(
     hidden_size=test_input.shape[2],
