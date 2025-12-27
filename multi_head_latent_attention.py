@@ -106,9 +106,9 @@ class Multi_Head_Latent_Attention(nn.Module):
         return output
 
 
-print("testing Multi_Head_Latent_Attention...")
+print("- testing Multi_Head_Latent_Attention...")
 test_input = torch.randn(2, 10, 512)
-print(f"test_input shape : {test_input.shape}")
+print(f"- test_input shape : {test_input.shape}")
 mhla = Multi_Head_Latent_Attention(
     hidden_size=test_input.shape[2],
     num_heads=4,
@@ -117,5 +117,5 @@ mhla = Multi_Head_Latent_Attention(
     v_head_dim=4,
 )
 test_output = mhla(test_input)
-print(f"test_output shape : {test_output.shape}")
-print(f"number of parameters : {sum(p.numel() for p in mhla.parameters()):,}")
+print(f"- test_output shape : {test_output.shape}")
+print(f"- number of parameters : {sum(p.numel() for p in mhla.parameters()):,}")
