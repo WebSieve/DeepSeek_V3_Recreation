@@ -18,7 +18,7 @@ class DS_Block(nn.Module):
         intermediate_dim,
         num_experts,
         num_experts_per_token,
-    ) -> None:
+    ):
         super().__init__()
 
         self.attn_rms = RMSNorm(hidden_size=hidden_size)
