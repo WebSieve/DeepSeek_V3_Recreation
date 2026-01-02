@@ -32,6 +32,10 @@ This implementation recreates the key architectural components of DeepSeek V3:
 
 ## 🏗️ Architecture Overview
 
+---
+> Note : Other Components will be added soon.
+---
+
 ### Multi-Head Latent Attention (MLA)
 
 MLA introduces a key innovation: **low-rank compression** of key-value projections, dramatically reducing the memory footprint and KV cache size while maintaining model performance.
@@ -225,7 +229,7 @@ Root Mean Square Layer Normalization:
 
 This implementation is inspired by the DeepSeek V3 architecture. For more details, refer to:
 
-- **DeepSeek V3 Paper**: [Link to paper when available]
+- **DeepSeek V3 Paper**: Check out the DeepSeek paper
 - **Multi-Head Latent Attention**: Novel attention mechanism with low-rank KV compression
 - **Mixture of Experts**: Sparse computation for efficient scaling
 
