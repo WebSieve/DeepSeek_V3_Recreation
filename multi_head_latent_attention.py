@@ -28,12 +28,12 @@ class Multi_Head_Latent_Attention(nn.Module):
         # key, value "A" projection with multi query attention style
         # part of lora rank decomposition
         self.down_projection = nn.Linear(
-            hidden_size, kv_lora_rank + self.qk_rope_head_dim, bias=False
+            hidden_size, kv_lora_rank + qk_rope_head_dim, bias=False
         )
 
         # key, value "B" projection (part of lora rank decomposition)
         self.up_projection = nn.Linear(
-            self.kv_lora_rank,
+            kv_lora_rank,
             num_heads * (self.qk_nope_head_dim + v_head_dim),
             bias=False,
         )
